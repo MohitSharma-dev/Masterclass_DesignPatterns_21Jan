@@ -5,10 +5,10 @@ import Services.DoSomethingService;
 public class Client {
     public static void main(String[] args) {
 
-        Student student = new Student();
-        DoSomethingService.doSomething(student);
-        student.setAge(25);
-        student.setCollege("Something");
+//        Student student = new Student();
+//        DoSomethingService.doSomething(student);
+//        student.setAge(25);
+//        student.setCollege("Something");
 //
 //        In the constructor we want to send all the attributes at once
 //        First of all put all the data in the StudentBuilder
