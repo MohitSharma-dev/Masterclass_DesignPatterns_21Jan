@@ -1,5 +1,6 @@
 package Buillder;
 
+
 public class StudentBuilder {
     private int id;
     private String name;
@@ -72,8 +73,19 @@ public class StudentBuilder {
         return this;
     }
 
+    void validate(){
+//        put all validations
+        if(getAge() < 21){
+            throw new IllegalArgumentException("Age must be greater than 21");
+        }
+        if(getGradYear() >= 2024){
+            throw new IllegalArgumentException("GradYear must be greater than 2024");
+        }
+    }
+
     public Student build() {
 //        keep all the validations
+        validate();
         return new Student(this);
     }
 }

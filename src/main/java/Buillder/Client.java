@@ -21,7 +21,7 @@ public class Client {
                 .setName("Something")
                         .build();
 
-//        Student student1 = new Student(studentBuilder);
+//        Student student1 = new Student(new Student.StudentBuilder());
 
 //        Student class should give me the builder object
     }
