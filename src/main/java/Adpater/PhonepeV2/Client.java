@@ -8,12 +8,9 @@ public class Client {
         System.out.println("Enter the Bank you want to use!");
         String BankName =  scanner.nextLine();
 
-        BankAPI bankAPI = null;
-        if(BankName.equals("Yes Bank")){
-            bankAPI = new YesBankAPIAdapter();
-        } else if(BankName.equals("ICICI Bank")){
-            bankAPI = new ICICIBankAPIAdapter();
-        }
+//        decision on which object to be created is being taken
+        BankAPI bankAPI = BankAPIFactory
+                .getBankAPIByBankName(BankName);
 
         PhonePe phonePe = new PhonePe(bankAPI);
         phonePe.fastTagRecharge(20);
