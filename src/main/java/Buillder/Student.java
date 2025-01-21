@@ -73,4 +73,8 @@ public class Student {
     public void setXiiScore(double xiiScore) {
         this.xiiScore = xiiScore;
     }
+
+    public static StudentBuilder getBuilder(){
+        return new StudentBuilder();
+    }
 }

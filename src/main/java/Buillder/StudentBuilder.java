@@ -13,55 +13,67 @@ public class StudentBuilder {
         return cgpa;
     }
 
-    public void setCgpa(double cgpa) {
+    public StudentBuilder setCgpa(double cgpa) {
         this.cgpa = cgpa;
+        return this;
     }
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public StudentBuilder setId(int id) {
         this.id = id;
+        return this;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    public StudentBuilder setName(String name) {
         this.name = name;
+        return this;
     }
 
     public int getAge() {
         return age;
     }
 
-    public void setAge(int age) {
+    public StudentBuilder setAge(int age) {
         this.age = age;
+        return this;
     }
 
     public int getGradYear() {
         return gradYear;
     }
 
-    public void setGradYear(int gradYear) {
+    public StudentBuilder setGradYear(int gradYear) {
         this.gradYear = gradYear;
+        return this;
     }
 
     public String getCollege() {
         return college;
     }
 
-    public void setCollege(String college) {
+    public StudentBuilder setCollege(String college) {
         this.college = college;
+        return this;
     }
 
     public double getXiiScore() {
         return xiiScore;
     }
 
-    public void setXiiScore(double xiiScore) {
+    public StudentBuilder setXiiScore(double xiiScore) {
         this.xiiScore = xiiScore;
+        return this;
+    }
+
+    public Student build() {
+//        keep all the validations
+        return new Student(this);
     }
 }

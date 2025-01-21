@@ -12,12 +12,17 @@ public class Client {
 //
 //        In the constructor we want to send all the attributes at once
 //        First of all put all the data in the StudentBuilder
-        StudentBuilder studentBuilder = new StudentBuilder();
-        studentBuilder.setAge(27);
-        studentBuilder.setCollege("Something");
-        studentBuilder.setId(1);
-        studentBuilder.setName("Something");
+//        StudentBuilder studentBuilder = new StudentBuilder();
 
-        Student student1 = new Student(studentBuilder);
+           Student student2 = Student.getBuilder()
+                .setAge(27)
+                .setCollege("Something")
+                .setId(1)
+                .setName("Something")
+                        .build();
+
+//        Student student1 = new Student(studentBuilder);
+
+//        Student class should give me the builder object
     }
 }
